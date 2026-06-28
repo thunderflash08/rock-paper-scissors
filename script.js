@@ -66,11 +66,24 @@ function Roundmsg(stat, humanchoice, compchoice) {
 
 function runGame() {
   while (roundcount < 5) {
-    getRoundWinner(getHumanChoice(), getComputerchoice());
+    console.log(getRoundWinner(getHumanChoice(), getComputerchoice()));
+    console.log(`human score: ${humanScore}`);
+    console.log(`computer score: ${compScore}`);
+  }
+
+  if (humanScore > compScore) {
+    console.log(
+      `You won the game!! Your Score - ${humanScore}\n Opponent Score - ${compScore}`,
+    );
+  } else if (compScore > humanScore) {
+    console.log(
+      `You Lost the game!! Your Score - ${humanScore}\n Opponent Score - ${compScore}`,
+    );
+  } else {
+    console.log(
+      `Game is a Draw!! Your Score - ${humanScore}\n Opponent Score - ${compScore}`,
+    );
   }
 }
 
-console.log(getRoundWinner(getHumanChoice(), getComputerchoice()));
-
-console.log(`human score: ${humanScore}`);
-console.log(`computer score: ${compScore}`);
+runGame();
