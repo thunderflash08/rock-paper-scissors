@@ -64,6 +64,12 @@ function Roundmsg(stat, humanchoice, compchoice) {
   return msg;
 }
 
+function runGame() {
+  while (roundcount < 5) {
+    getRoundWinner(getHumanChoice(), getComputerchoice());
+  }
+}
+
 console.log(getRoundWinner(getHumanChoice(), getComputerchoice()));
 
 console.log(`human score: ${humanScore}`);
