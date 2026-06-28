@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.instructions h1 {
+  color: blueviolet;
+}
+
+.instructions h2 {
+  color: burlywood;
+}
